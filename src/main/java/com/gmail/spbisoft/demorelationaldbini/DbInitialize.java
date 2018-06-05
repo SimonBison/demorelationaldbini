@@ -1,9 +1,11 @@
 package com.gmail.spbisoft.demorelationaldbini;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 @Component
+@ConditionalOnProperty(name = "app.db-init", havingValue = "true")
 public class DbInitialize implements CommandLineRunner {
     private BankAccountRepository bankAccountRepository;
 
