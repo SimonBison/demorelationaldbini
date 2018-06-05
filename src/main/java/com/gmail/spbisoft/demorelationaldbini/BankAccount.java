@@ -29,4 +29,8 @@ public class BankAccount {
     public String getOwner() {
         return owner;
     }
+
+    public int getAmount() {
+        return amount;
+    }
 }
