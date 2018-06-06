@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 @ConditionalOnProperty(name = "app.db-init", havingValue = "true")
-public class DbInitialize implements CommandLineRunner {
+public class DbInitializer implements CommandLineRunner {
     private BankAccountRepository bankAccountRepository;
 
-    public DbInitialize(BankAccountRepository bankAccountRepository) {
+    public DbInitializer(BankAccountRepository bankAccountRepository) {
         this.bankAccountRepository = bankAccountRepository;
     }
 
